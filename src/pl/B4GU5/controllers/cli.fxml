@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="647.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.B4GU5.controllers.cliFXMLController">
+   <children>
+      <JFXTextArea fx:id="cmdConsole" editable="false" prefHeight="375.0" prefWidth="647.0" style="-fx-background-color: black; -fx-background-radius: 0px; -fx-text-fill: white;" text="&#10;" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font name="Consolas" size="14.0" />
+         </font></JFXTextArea>
+      <JFXTextField fx:id="cmdInput" focusColor="RED" layoutY="375.0" prefHeight="25.0" prefWidth="589.0" promptText=" Wpisz ? lub pomoc dla uzyskania pomocy" style="-fx-background-color: black; -fx-background-radius: 0px; -fx-text-fill: white;" unFocusColor="BLACK" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="58.0" />
+      <Separator layoutY="368.0" prefHeight="12.0" prefWidth="647.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <JFXButton layoutX="589.0" layoutY="375.0" onAction="#sendCmd" prefHeight="27.0" prefWidth="58.0" ripplerFill="BLACK" style="-fx-background-color: white; -fx-background-radius: 0px;" text="Wyślij" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+   </children>
+</AnchorPane>

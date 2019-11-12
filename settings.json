@@ -1,0 +1,51 @@
+{
+	"polaczenie": {
+		"nazwaurzadzenia": "Lan Kontroler V3",
+		"adresip": "10.10.10.120",
+		"port": "80",
+		"nazwauzytkownika": "admin",
+		"haslo": "admin"
+	},
+	"urzadzenia": [{
+		"Lan Kontroler": {
+			"polaczenie": {
+				"nazwaurzadzenia": "Lan Kontroler V3",
+				"adresip": "10.10.10.120",
+				"port": "80",
+				"nazwauzytkownika": "admin",
+				"haslo": "admin"
+			},
+			"nazwy": [{
+				"czujniki": {
+					"ds1": "",
+					"ds2": "",
+					"ds3": "",
+					"ds4": "",
+					"ds5": "",
+					"ds6": "",
+					"ds7": "",
+					"ds8": "",
+					"t1": "",
+					"h1": "",
+					"p1": ""
+				},
+				"wyjscia": [{
+					"wyjscia": {
+						"wyjscie0": "",
+						"wyjscie1": "",
+						"wyjscie2": "",
+						"wyjscie3": "",
+						"wyjscie4": "",
+						"wyjscie5": ""
+					},
+					"pwm": {
+						"wyjscie0": "",
+						"wyjscie1": "",
+						"wyjscie2": "",
+						"wyjscie3": ""
+					}
+				}]
+			}]
+		}
+	}]
+}

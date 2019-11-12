@@ -1,0 +1,658 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXMasonryPane?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXScrollPane?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import de.jensd.fx.glyphs.weathericons.WeatherIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="260.0" minWidth="620.0" prefHeight="474.0" prefWidth="840.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.B4GU5.controllers.mainFXMLController">
+   <children>
+      <AnchorPane fx:id="anchorpane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="260.0" minWidth="620.0" prefHeight="474.0" prefWidth="840.0" style="-fx-background-color: linear-gradient(to right top, #161616, #181819, #19191c, #1a1b20, #1b1d23, #21242a, #272c32, #2d3439, #3c4347, #4c5355, #5c6364, #6e7474);" StackPane.alignment="CENTER">
+         <children>
+            <JFXTabPane layoutX="180.0" prefHeight="436.0" prefWidth="660.0" stylesheets="@tab.css" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="36.0" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <tabs>
+                  <Tab text="Ogólne">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #212121;">
+                           <children>
+                              <JFXMasonryPane cellHeight="20.0" cellWidth="20.0" layoutX="1.0" prefHeight="364.0" prefWidth="659.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <padding>
+                                    <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                 </padding></JFXMasonryPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Wejścia">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="660.0" style="-fx-background-color: #212121;">
+                           <children>
+                              <Label layoutX="605.0" layoutY="331.0" text="#TODO" textFill="#393939" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+                              <VBox alignment="CENTER" layoutY="134.0" prefHeight="96.0" prefWidth="659.0" AnchorPane.bottomAnchor="133.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="134.0">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" text="Nic tu nie ma! :(" textFill="#393939" VBox.vgrow="NEVER">
+                                       <font>
+                                          <Font size="43.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Wyjścia">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #212121;">
+                           <children>
+                              <JFXMasonryPane HSpacing="15.0" VSpacing="15.0" cellHeight="10.0" cellWidth="10.0" prefHeight="363.0" prefWidth="659.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <AnchorPane maxHeight="180.0" maxWidth="220.0" minHeight="180.0" minWidth="160.0" prefHeight="160.0" prefWidth="150.0" style="-fx-background-color: #424242; -fx-background-radius: 4px;">
+                                       <children>
+                                          <JFXCheckBox fx:id="out0" checkedColor="#ea3109" layoutX="14.0" layoutY="14.0" onAction="#out0" text="Wyjście 0" textFill="WHITE" unCheckedColor="WHITE" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0">
+                                             <contextMenu>
+                                                <ContextMenu>
+                                                  <items>
+                                                    <MenuItem mnemonicParsing="false" text="Edytuj">
+                                                         <graphic>
+                                                            <MaterialDesignIconView glyphName="TOOLTIP_EDIT" />
+                                                         </graphic>
+                                                      </MenuItem>
+                                                  </items>
+                                                </ContextMenu>
+                                             </contextMenu></JFXCheckBox>
+                                          <JFXCheckBox fx:id="out1" checkedColor="#ea3109" layoutX="14.0" layoutY="41.0" onAction="#out1" text="Wyjście 1" textFill="WHITE" unCheckedColor="WHITE" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="41.0">
+                                             <contextMenu>
+                                                <ContextMenu>
+                                                   <items>
+                                                      <MenuItem mnemonicParsing="false" text="Edytuj">
+                                                         <graphic>
+                                                            <MaterialDesignIconView glyphName="TOOLTIP_EDIT" />
+                                                         </graphic>
+                                                      </MenuItem>
+                                                   </items>
+                                                </ContextMenu>
+                                             </contextMenu></JFXCheckBox>
+                                          <JFXCheckBox fx:id="out2" checkedColor="#ea3109" layoutX="14.0" layoutY="68.0" onAction="#out2" text="Wyjście 2" textFill="WHITE" unCheckedColor="WHITE" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="68.0">
+                                             <contextMenu>
+                                                <ContextMenu>
+                                                   <items>
+                                                      <MenuItem mnemonicParsing="false" text="Edytuj">
+                                                         <graphic>
+                                                            <MaterialDesignIconView glyphName="TOOLTIP_EDIT" />
+                                                         </graphic>
+                                                      </MenuItem>
+                                                   </items>
+                                                </ContextMenu>
+                                             </contextMenu></JFXCheckBox>
+                                          <JFXCheckBox fx:id="out3" checkedColor="#ea3109" layoutX="14.0" layoutY="94.0" onAction="#out3" text="Wyjście 3" textFill="WHITE" unCheckedColor="WHITE" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="94.0">
+                                             <contextMenu>
+                                                <ContextMenu>
+                                                   <items>
+                                                      <MenuItem mnemonicParsing="false" text="Edytuj">
+                                                         <graphic>
+                                                            <MaterialDesignIconView glyphName="TOOLTIP_EDIT" />
+                                                         </graphic>
+                                                      </MenuItem>
+                                                   </items>
+                                                </ContextMenu>
+                                             </contextMenu></JFXCheckBox>
+                                          <JFXCheckBox fx:id="out4" checkedColor="#ea3109" layoutX="14.0" layoutY="121.0" onAction="#out4" text="Wyjście 4" textFill="WHITE" unCheckedColor="WHITE" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="121.0">
+                                             <contextMenu>
+                                                <ContextMenu>
+                                                   <items>
+                                                      <MenuItem mnemonicParsing="false" text="Edytuj">
+                                                         <graphic>
+                                                            <MaterialDesignIconView glyphName="TOOLTIP_EDIT" />
+                                                         </graphic>
+                                                      </MenuItem>
+                                                   </items>
+                                                </ContextMenu>
+                                             </contextMenu></JFXCheckBox>
+                                          <JFXCheckBox fx:id="out5" checkedColor="#ea3109" layoutX="14.0" layoutY="148.0" onAction="#out5" text="Wyjście 5" textFill="WHITE" unCheckedColor="WHITE" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="148.0">
+                                             <contextMenu>
+                                                <ContextMenu>
+                                                   <items>
+                                                      <MenuItem mnemonicParsing="false" text="Edytuj">
+                                                         <graphic>
+                                                            <MaterialDesignIconView glyphName="TOOLTIP_EDIT" />
+                                                         </graphic>
+                                                      </MenuItem>
+                                                   </items>
+                                                </ContextMenu>
+                                             </contextMenu></JFXCheckBox>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" layoutX="55.0" layoutY="77.0" prefHeight="17.0" prefWidth="183.0" rotate="90.0" text="Wyjścia" textFill="WHITE">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane maxHeight="224.0" maxWidth="285.0" minHeight="180.0" minWidth="285.0" prefHeight="182.0" prefWidth="150.0" style="-fx-background-color: #424242; -fx-background-radius: 4px;">
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" layoutX="175.0" layoutY="42.0" prefHeight="17.0" prefWidth="183.0" rotate="90.0" text="PWM" textFill="WHITE" AnchorPane.bottomAnchor="116.0" AnchorPane.rightAnchor="-73.0" AnchorPane.topAnchor="42.0">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXCheckBox fx:id="pwm0" checkedColor="#ea3109" layoutX="16.0" layoutY="8.0" onAction="#pwm0" text="Wyjście 0" textFill="WHITE" unCheckedColor="WHITE" AnchorPane.leftAnchor="16.0">
+                                             <contextMenu>
+                                                <ContextMenu>
+                                                   <items>
+                                                      <MenuItem mnemonicParsing="false" text="Edytuj">
+                                                         <graphic>
+                                                            <MaterialDesignIconView glyphName="TOOLTIP_EDIT" />
+                                                         </graphic>
+                                                      </MenuItem>
+                                                   </items>
+                                                </ContextMenu>
+                                             </contextMenu></JFXCheckBox>
+                                          <JFXCheckBox fx:id="pwm1" checkedColor="#ea3109" layoutX="16.0" layoutY="35.0" onAction="#pwm1" text="Wyjście 1" textFill="WHITE" unCheckedColor="WHITE" AnchorPane.leftAnchor="16.0">
+                                             <contextMenu>
+                                                <ContextMenu>
+                                                   <items>
+                                                      <MenuItem mnemonicParsing="false" text="Edytuj">
+                                                         <graphic>
+                                                            <MaterialDesignIconView glyphName="TOOLTIP_EDIT" />
+                                                         </graphic>
+                                                      </MenuItem>
+                                                   </items>
+                                                </ContextMenu>
+                                             </contextMenu></JFXCheckBox>
+                                          <JFXCheckBox fx:id="pwm2" checkedColor="#ea3109" layoutX="16.0" layoutY="62.0" onAction="#pwm2" text="Wyjście 2" textFill="WHITE" unCheckedColor="WHITE" AnchorPane.leftAnchor="16.0">
+                                             <contextMenu>
+                                                <ContextMenu>
+                                                   <items>
+                                                      <MenuItem mnemonicParsing="false" text="Edytuj">
+                                                         <graphic>
+                                                            <MaterialDesignIconView glyphName="TOOLTIP_EDIT" />
+                                                         </graphic>
+                                                      </MenuItem>
+                                                   </items>
+                                                </ContextMenu>
+                                             </contextMenu></JFXCheckBox>
+                                          <JFXCheckBox fx:id="pwm3" checkedColor="#ea3109" layoutX="16.0" layoutY="88.0" onAction="#pwm3" text="Wyjście 3" textFill="WHITE" unCheckedColor="WHITE" AnchorPane.leftAnchor="16.0">
+                                             <contextMenu>
+                                                <ContextMenu>
+                                                   <items>
+                                                      <MenuItem mnemonicParsing="false" text="Edytuj">
+                                                         <graphic>
+                                                            <MaterialDesignIconView glyphName="TOOLTIP_EDIT" />
+                                                         </graphic>
+                                                      </MenuItem>
+                                                   </items>
+                                                </ContextMenu>
+                                             </contextMenu></JFXCheckBox>
+                                          <JFXSlider fx:id="pwm0slider" layoutX="107.0" layoutY="10.0" onMouseReleased="#pwm0slider" stylesheets="@slider.css" AnchorPane.leftAnchor="107.0" AnchorPane.rightAnchor="38.0" />
+                                          <JFXSlider fx:id="pwm1slider" layoutX="107.0" layoutY="37.0" onMouseReleased="#pwm1slider" stylesheets="@slider.css" AnchorPane.leftAnchor="107.0" AnchorPane.rightAnchor="38.0" />
+                                          <JFXSlider fx:id="pwm2slider" layoutX="107.0" layoutY="64.0" onMouseReleased="#pwm2slider" stylesheets="@slider.css" AnchorPane.leftAnchor="107.0" AnchorPane.rightAnchor="38.0" />
+                                          <JFXSlider fx:id="pwm3slider" layoutX="107.0" layoutY="90.0" onMouseReleased="#pwm3slider" stylesheets="@slider.css" AnchorPane.leftAnchor="107.0" AnchorPane.rightAnchor="38.0" />
+                                          <AnchorPane layoutX="19.0" layoutY="115.0" prefHeight="60.0" prefWidth="251.0" style="-fx-background-color: #f0ad4e; -fx-background-radius: 4px;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="19.0" AnchorPane.rightAnchor="15.0">
+                                             <children>
+                                                <JFXTextField fx:id="out1fr" focusColor="#ea3109" layoutX="81.0" layoutY="28.0" prefHeight="25.0" prefWidth="123.0" unFocusColor="WHITE" AnchorPane.leftAnchor="81.0" AnchorPane.rightAnchor="47.0" />
+                                                <JFXTextField fx:id="out0fr" focusColor="#ea3109" layoutX="81.0" layoutY="1.0" prefHeight="25.0" prefWidth="123.0" unFocusColor="WHITE" AnchorPane.leftAnchor="81.0" AnchorPane.rightAnchor="47.0" />
+                                                <Label layoutX="21.0" layoutY="10.0" text="Wyjście 0" AnchorPane.leftAnchor="21.0" />
+                                                <Label layoutX="10.0" layoutY="37.0" text="Wyjście 1-3" AnchorPane.leftAnchor="10.0" />
+                                                <Label layoutX="218.0" layoutY="4.0" text="Hz" textFill="#b98138" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="4.0">
+                                                   <font>
+                                                      <Font name="System Bold" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                 </padding>
+                              </JFXMasonryPane>
+                              <JFXCheckBox checkedColor="#ea3109" disable="true" layoutX="14.0" layoutY="330.0" selected="true" text="- Włączone" textFill="WHITE" unCheckedColor="WHITE" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" />
+                              <JFXCheckBox checkedColor="#ea3109" disable="true" layoutX="108.0" layoutY="330.0" text="- Wyłączone" textFill="WHITE" unCheckedColor="WHITE" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="108.0" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Czujniki">
+                     <content>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #212121;">
+                           <children>
+                              <JFXScrollPane prefHeight="363.0" prefWidth="659.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="150.0" prefWidth="200.0">
+                                       <children>
+                                          <FlowPane alignment="CENTER" columnHalignment="CENTER" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #212121;" StackPane.alignment="CENTER">
+                                             <children>
+                                                <AnchorPane prefHeight="70.0" prefWidth="150.0" style="-fx-background-color: #337ab7; -fx-background-radius: 4px;">
+                                                   <children>
+                                                      <WeatherIconView fill="#235d8c" glyphName="THERMOMETER" layoutX="127.0" layoutY="40.0" size="34" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="4.0" />
+                                                      <Label fx:id="t1name" alignment="CENTER" layoutX="10.0" layoutY="14.0" prefHeight="17.0" prefWidth="125.0" text="T1   (DS1)" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                                                         <contextMenu>
+                                                            <ContextMenu>
+                                                               <items>
+                                                                  <MenuItem mnemonicParsing="false" onAction="#editNameDS1" text="Edytuj">
+                                                                     <graphic>
+                                                                        <MaterialDesignIconView glyphName="TOOLTIP_EDIT" />
+                                                                     </graphic>
+                                                                  </MenuItem>
+                                                               </items>
+                                                            </ContextMenu>
+                                                         </contextMenu>
+                                                      </Label>
+                                                      <Label fx:id="t1temp" alignment="CENTER" layoutX="10.0" layoutY="39.0" prefHeight="17.0" prefWidth="125.0" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+                                                   </children>
+                                                   <FlowPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </FlowPane.margin>
+                                                </AnchorPane>
+                                                <AnchorPane prefHeight="70.0" prefWidth="150.0" style="-fx-background-color: #337ab7; -fx-background-radius: 4px;">
+                                                   <children>
+                                                      <WeatherIconView fill="#235d8c" glyphName="THERMOMETER" layoutX="127.0" layoutY="40.0" size="34" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="4.0" />
+                                                      <Label fx:id="t2name" alignment="CENTER" layoutX="10.0" layoutY="14.0" prefHeight="17.0" prefWidth="125.0" text="T2   (DS2)" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                                                         <contextMenu>
+                                                            <ContextMenu>
+                                                               <items>
+                                                                  <MenuItem mnemonicParsing="false" onAction="#editNameDS2" text="Edytuj">
+                                                                     <graphic>
+                                                                        <MaterialDesignIconView glyphName="TOOLTIP_EDIT" />
+                                                                     </graphic>
+                                                                  </MenuItem>
+                                                               </items>
+                                                            </ContextMenu>
+                                                         </contextMenu>
+                                                      </Label>
+                                                      <Label fx:id="t2temp" alignment="CENTER" layoutX="10.0" layoutY="39.0" prefHeight="17.0" prefWidth="125.0" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+                                                   </children>
+                                                   <FlowPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </FlowPane.margin>
+                                                </AnchorPane>
+                                                <AnchorPane prefHeight="70.0" prefWidth="150.0" style="-fx-background-color: #337ab7; -fx-background-radius: 4px;">
+                                                   <children>
+                                                      <WeatherIconView fill="#235d8c" glyphName="THERMOMETER" layoutX="127.0" layoutY="40.0" size="34" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="4.0" />
+                                                      <Label fx:id="t3name" alignment="CENTER" layoutX="10.0" layoutY="14.0" prefHeight="17.0" prefWidth="125.0" text="T3   (DS3)" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                                                         <contextMenu>
+                                                            <ContextMenu>
+                                                               <items>
+                                                                  <MenuItem mnemonicParsing="false" onAction="#editNameDS3" text="Edytuj">
+                                                                     <graphic>
+                                                                        <MaterialDesignIconView glyphName="TOOLTIP_EDIT" />
+                                                                     </graphic>
+                                                                  </MenuItem>
+                                                               </items>
+                                                            </ContextMenu>
+                                                         </contextMenu>
+                                                      </Label>
+                                                      <Label fx:id="t3temp" alignment="CENTER" layoutX="10.0" layoutY="39.0" prefHeight="17.0" prefWidth="125.0" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+                                                   </children>
+                                                   <FlowPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </FlowPane.margin>
+                                                </AnchorPane>
+                                                <AnchorPane prefHeight="70.0" prefWidth="150.0" style="-fx-background-color: #337ab7; -fx-background-radius: 4px;">
+                                                   <children>
+                                                      <WeatherIconView fill="#235d8c" glyphName="THERMOMETER" layoutX="127.0" layoutY="40.0" size="34" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="4.0" />
+                                                      <Label fx:id="t4name" alignment="CENTER" layoutX="10.0" layoutY="14.0" prefHeight="17.0" prefWidth="125.0" text="T4   (DS4)" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                                                         <contextMenu>
+                                                            <ContextMenu>
+                                                               <items>
+                                                                  <MenuItem mnemonicParsing="false" onAction="#editNameDS4" text="Edytuj">
+                                                                     <graphic>
+                                                                        <MaterialDesignIconView glyphName="TOOLTIP_EDIT" />
+                                                                     </graphic>
+                                                                  </MenuItem>
+                                                               </items>
+                                                            </ContextMenu>
+                                                         </contextMenu>
+                                                      </Label>
+                                                      <Label fx:id="t4temp" alignment="CENTER" layoutX="10.0" layoutY="39.0" prefHeight="17.0" prefWidth="125.0" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+                                                   </children>
+                                                   <FlowPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </FlowPane.margin>
+                                                </AnchorPane>
+                                                <AnchorPane prefHeight="70.0" prefWidth="150.0" style="-fx-background-color: #337ab7; -fx-background-radius: 4px;">
+                                                   <children>
+                                                      <WeatherIconView fill="#235d8c" glyphName="THERMOMETER" layoutX="127.0" layoutY="40.0" size="34" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="4.0" />
+                                                      <Label fx:id="t5name" alignment="CENTER" layoutX="10.0" layoutY="14.0" prefHeight="17.0" prefWidth="125.0" text="T5   (DS5)" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                                                         <contextMenu>
+                                                            <ContextMenu>
+                                                               <items>
+                                                                  <MenuItem mnemonicParsing="false" onAction="#editNameDS5" text="Edytuj">
+                                                                     <graphic>
+                                                                        <MaterialDesignIconView glyphName="TOOLTIP_EDIT" />
+                                                                     </graphic>
+                                                                  </MenuItem>
+                                                               </items>
+                                                            </ContextMenu>
+                                                         </contextMenu>
+                                                      </Label>
+                                                      <Label fx:id="t5temp" alignment="CENTER" layoutX="10.0" layoutY="39.0" prefHeight="17.0" prefWidth="125.0" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+                                                   </children>
+                                                   <FlowPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </FlowPane.margin>
+                                                </AnchorPane>
+                                                <AnchorPane prefHeight="70.0" prefWidth="150.0" style="-fx-background-color: #337ab7; -fx-background-radius: 4px;">
+                                                   <children>
+                                                      <WeatherIconView fill="#235d8c" glyphName="THERMOMETER" layoutX="127.0" layoutY="40.0" size="34" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="4.0" />
+                                                      <Label fx:id="t6name" alignment="CENTER" layoutX="10.0" layoutY="14.0" prefHeight="17.0" prefWidth="125.0" text="T6   (DS6)" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                                                         <contextMenu>
+                                                            <ContextMenu>
+                                                               <items>
+                                                                  <MenuItem mnemonicParsing="false" onAction="#editNameDS6" text="Edytuj">
+                                                                     <graphic>
+                                                                        <MaterialDesignIconView glyphName="TOOLTIP_EDIT" />
+                                                                     </graphic>
+                                                                  </MenuItem>
+                                                               </items>
+                                                            </ContextMenu>
+                                                         </contextMenu>
+                                                      </Label>
+                                                      <Label fx:id="t6temp" alignment="CENTER" layoutX="10.0" layoutY="39.0" prefHeight="17.0" prefWidth="125.0" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+                                                   </children>
+                                                   <FlowPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </FlowPane.margin>
+                                                </AnchorPane>
+                                                <AnchorPane prefHeight="70.0" prefWidth="150.0" style="-fx-background-color: #337ab7; -fx-background-radius: 4px;">
+                                                   <children>
+                                                      <WeatherIconView fill="#235d8c" glyphName="THERMOMETER" layoutX="127.0" layoutY="40.0" size="34" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="4.0" />
+                                                      <Label fx:id="t7name" alignment="CENTER" layoutX="10.0" layoutY="14.0" prefHeight="17.0" prefWidth="125.0" text="T7   (DS7)" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                                                         <contextMenu>
+                                                            <ContextMenu>
+                                                               <items>
+                                                                  <MenuItem mnemonicParsing="false" onAction="#editNameDS7" text="Edytuj">
+                                                                     <graphic>
+                                                                        <MaterialDesignIconView glyphName="TOOLTIP_EDIT" />
+                                                                     </graphic>
+                                                                  </MenuItem>
+                                                               </items>
+                                                            </ContextMenu>
+                                                         </contextMenu>
+                                                      </Label>
+                                                      <Label fx:id="t7temp" alignment="CENTER" layoutX="10.0" layoutY="39.0" prefHeight="17.0" prefWidth="125.0" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+                                                   </children>
+                                                   <FlowPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </FlowPane.margin>
+                                                </AnchorPane>
+                                                <AnchorPane prefHeight="70.0" prefWidth="150.0" style="-fx-background-color: #337ab7; -fx-background-radius: 4px;">
+                                                   <children>
+                                                      <WeatherIconView fill="#235d8c" glyphName="THERMOMETER" layoutX="127.0" layoutY="40.0" size="34" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="4.0" />
+                                                      <Label fx:id="t8name" alignment="CENTER" layoutX="10.0" layoutY="14.0" prefHeight="17.0" prefWidth="125.0" text="T8   (DS8)" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                                                         <contextMenu>
+                                                            <ContextMenu>
+                                                               <items>
+                                                                  <MenuItem mnemonicParsing="false" onAction="#editNameDS8" text="Edytuj">
+                                                                     <graphic>
+                                                                        <MaterialDesignIconView glyphName="TOOLTIP_EDIT" />
+                                                                     </graphic>
+                                                                  </MenuItem>
+                                                               </items>
+                                                            </ContextMenu>
+                                                         </contextMenu>
+                                                      </Label>
+                                                      <Label fx:id="t8temp" alignment="CENTER" layoutX="10.0" layoutY="39.0" prefHeight="17.0" prefWidth="125.0" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+                                                   </children>
+                                                   <FlowPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </FlowPane.margin>
+                                                </AnchorPane>
+                                                <AnchorPane prefHeight="70.0" prefWidth="150.0" style="-fx-background-color: #337ab7; -fx-background-radius: 4px;">
+                                                   <children>
+                                                      <WeatherIconView fill="#235d8c" glyphName="THERMOMETER" layoutX="127.0" layoutY="40.0" size="34" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="4.0" />
+                                                      <Label fx:id="t9name" alignment="CENTER" layoutX="10.0" layoutY="14.0" prefHeight="17.0" prefWidth="125.0" text="T9   (T1)" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                                                         <contextMenu>
+                                                            <ContextMenu>
+                                                               <items>
+                                                                  <MenuItem mnemonicParsing="false" onAction="#editNameT1" text="Edytuj">
+                                                                     <graphic>
+                                                                        <MaterialDesignIconView glyphName="TOOLTIP_EDIT" />
+                                                                     </graphic>
+                                                                  </MenuItem>
+                                                               </items>
+                                                            </ContextMenu>
+                                                         </contextMenu>
+                                                      </Label>
+                                                      <Label fx:id="t9temp" alignment="CENTER" layoutX="10.0" layoutY="39.0" prefHeight="17.0" prefWidth="125.0" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+                                                   </children>
+                                                   <FlowPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </FlowPane.margin>
+                                                </AnchorPane>
+                                                <AnchorPane prefHeight="70.0" prefWidth="150.0" style="-fx-background-color: #f0ad4e; -fx-background-radius: 4px;">
+                                                   <children>
+                                                      <WeatherIconView fill="#b98138" glyphName="HUMIDITY" layoutX="114.078125" layoutY="41.2705078125" size="34" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="4.0" />
+                                                      <Label fx:id="h1name" alignment="CENTER" layoutX="10.0" layoutY="14.0" prefHeight="17.0" prefWidth="125.0" text="H1   (H1)" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                                                         <contextMenu>
+                                                            <ContextMenu>
+                                                               <items>
+                                                                  <MenuItem mnemonicParsing="false" onAction="#editNameH1" text="Edytuj">
+                                                                     <graphic>
+                                                                        <MaterialDesignIconView glyphName="TOOLTIP_EDIT" />
+                                                                     </graphic>
+                                                                  </MenuItem>
+                                                               </items>
+                                                            </ContextMenu>
+                                                         </contextMenu>
+                                                      </Label>
+                                                      <Label fx:id="h1value" alignment="CENTER" layoutX="10.0" layoutY="39.0" prefHeight="17.0" prefWidth="125.0" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+                                                   </children>
+                                                   <FlowPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </FlowPane.margin>
+                                                </AnchorPane>
+                                                <AnchorPane cache="true" prefHeight="70.0" prefWidth="150.0" style="-fx-background-color: #f0ad4e; -fx-background-radius: 4px;">
+                                                   <children>
+                                                      <WeatherIconView fill="#b98138" glyphName="BAROMETER" layoutX="127.0" layoutY="40.0" size="34" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="4.0" />
+                                                      <Label fx:id="p1name" alignment="CENTER" layoutX="10.0" layoutY="14.0" prefHeight="17.0" prefWidth="125.0" text="P1   (P1)" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                                                         <contextMenu>
+                                                            <ContextMenu>
+                                                               <items>
+                                                                  <MenuItem mnemonicParsing="false" onAction="#editNameP1" text="Edytuj">
+                                                                     <graphic>
+                                                                        <MaterialDesignIconView glyphName="TOOLTIP_EDIT" />
+                                                                     </graphic>
+                                                                  </MenuItem>
+                                                               </items>
+                                                            </ContextMenu>
+                                                         </contextMenu>
+                                                      </Label>
+                                                      <Label fx:id="p1value" alignment="CENTER" layoutX="10.0" layoutY="39.0" prefHeight="17.0" prefWidth="125.0" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+                                                   </children>
+                                                   <FlowPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </FlowPane.margin>
+                                                </AnchorPane>
+                                             </children>
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                          </FlowPane>
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                              </JFXScrollPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Ustawienia">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #212121;">
+                           <children>
+                              <Label layoutX="605.0" layoutY="331.0" text="#TODO" textFill="#393939" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+                              <VBox alignment="CENTER" layoutY="134.0" prefHeight="96.0" prefWidth="659.0" AnchorPane.bottomAnchor="133.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="134.0">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" text="Nic tu nie ma! :(" textFill="#393939" VBox.vgrow="NEVER">
+                                       <font>
+                                          <Font size="43.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="O programie">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #212121;">
+                           <children>
+                              <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="14.0" prefHeight="102.0" prefWidth="630.0" text="Wersja oprogramowania: 0.0.1A&#10;(Autor oprogramowania nie gwarantuje jego prawidłowego działania oraz&#10;nie odpowiada za wszelkie uszkodzenia/zniszczenia z nim związane.)&#10;&#10;&#10;&#10;LICENCJA/LICENSE:&#10;" textFill="WHITE" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="14.0" />
+                              <JFXTextArea editable="false" layoutX="11.0" layoutY="117.0" prefHeight="279.0" prefWidth="637.0" style="-fx-text-fill: white;" text="Paragraf 1 – Definicje.&#10;&#10;1. Utwór Zależny oznacza materiał objęty Prawami Autorskimi i Prawami Podobnymi do Praw Autorskich, pochodzący&#10;od, lub opracowany na podstawie Utworu Licencjonowanego, w którym następuje tłumaczenie Utworu&#10;Licencjonowanego, jego zmiana, aranżacja, przetworzenie lub inna modyfikacja w taki sposób, że wymagane jest&#10;zezwolenie na podstawie Prawa Autorskiego i Praw Podobnych do Praw Autorskich należących do Licencjodawcy.&#10;Dla celów niniejszej Licencji Publicznej, jeśli Utwór Licencjonowany jest utworem muzycznym, wykonaniem lub&#10;nagraniem dźwiękowym, Utwór Zależny powstaje zawsze, gdy Utwór Licencjonowany zostaje zsynchronizowany w&#10;relacji czasowej z ruchomym obrazem.&#10;2. Licencja Twórcy Utworu Zależnego oznacza licencję, którą Licencjobiorca stosuje do Praw Autorskich i Praw&#10;Podobnych do Praw Autorskich przysługujących mu w odniesieniu do Utworu Zależnego, zgodnie z warunkami&#10;niniejszej Licencji Publicznej.&#10;3. Licencja Kompatybilna z BY-SA oznacza jedną z licencji wymienionych na&#10;creativecommons.org/compatiblelicenses, zatwierdzoną przez Creative Commons jako istotnie odpowiadającą&#10;niniejszej Licencji Publicznej.&#10;4. Prawa Autorskie i Prawa Podobne do Praw Autorskich oznaczają prawo autorskie i/lub prawa ściśle związane z&#10;prawem autorskim, włącznie z, bez ograniczeń, wykonywaniem, nadawaniem, nagrywaniem dźwięku, oraz Prawami&#10;Sui Generis do Baz Danych, bez względu na to, w jaki sposób prawa te są nazywane i kategoryzowane. Dla celów&#10;niniejszej Licencji Publicznej, prawa wymienione w Paragrafie 2(b)(1)-(2) nie są Prawami Autorskimi i Prawami&#10;Podobnymi do Praw Autorskich.&#10;5. Skuteczne Zabezpieczenia Techniczne oznaczają środki, które, w braku odpowiedniego zezwolenia, nie mogą być&#10;obchodzone na podstawie praw wykonujących zobowiązanie przyjęte na podstawie art. 11 Traktatu Światowej&#10;Organizacji Własności Intelektualnej o Prawie Autorskim z dn. 20 grudnia 1996, lub podobnych umów&#10;międzynarodowych.&#10;6. Wyjątki i Ograniczenia oznaczają dozwolony użytek lub inne wyjątki lub ograniczenia Praw Autorskich i Praw&#10;Podobnych do Praw Autorskich, mające zastosowanie do korzystania z Utworu Licencjonowanego przez&#10;Licencjobiorcę.&#10;7. Elementy Licencji oznaczają atrybuty wymienione w nazwie Licencji Publicznej Creative Commons. Elementami&#10;Licencji w przypadku niniejszej Licencji Publicznej jest Uznanie autorstwa, Na tych samych warunkach.&#10;8. Utwór Licencjonowany oznacza dzieło artystyczne lub literackie, bazę danych, lub inny materiał, do którego&#10;Licencjodawca zastosował niniejszą Licencję Publiczną.&#10;9. Uprawnienia Licencyjne oznaczają uprawnienia przyznane Licencjobiorcy na warunkach niniejszej Licencji&#10;Publicznej, ograniczające się do wszystkich Praw Autorskich i Praw Podobnych do Praw Autorskich regulujących&#10;korzystanie z Utworu Licencjonowanego przez Licencjobiorcę, i które Licencjodawca jest upoważniony licencjonować.&#10;10. Licencjodawca oznacza osobę(y) fizyczną(e) lub podmiot(y) udzielający(e) praw na warunkach niniejszej Licencji&#10;Publicznej.&#10;11. Dzielenie się oznacza udostępniane publiczne utworu jakimikolwiek środkami, wymagające zgody na podstawie&#10;Uprawnień Licencyjnych, takie jak reprodukcja, publiczne wystawianie, publiczne wykonanie, rozprowadzanie,&#10;rozpowszechnianie, komunikowanie, importowanie oraz publiczne udostępnianie utworu w taki sposób, aby każdy&#10;mógł mieć do niego dostęp w miejscu i czasie przez siebie wybranym.&#10;12. Prawa Sui Generis do Baz Danych oznaczają prawa inne niż prawo autorskie, wynikające z Dyrektywy Parlamentu&#10;Europejskiego i Rady Nr 96/9/WE z 11 marca 1996 r. o prawnej ochronie baz danych, z późniejszymi zmianami/lub&#10;zastępowanej nową, jak również inne prawa odpowiadające im istotnie, obowiązujące gdziekolwiek na świecie.&#10;13. Licencjobiorca oznacza podmiot wykonujący Uprawnienia Licencyjne na warunkach niniejszej Licencji Publicznej.&#10;&#10;&#10;Paragraf 2 – Zakres.&#10;&#10;1. Udzielenie licencji.&#10;1. Zgodnie z postanowieniami niniejszej Licencji Publicznej, Licencjodawca udziela niniejszym Licencjobiorcy,&#10;nieodpłatnej, nieobejmującej prawa do udzielania sublicencji, niewyłącznej, nieodwołalnej licencji na korzystanie z&#10;Utworu na terytorium całego świata w odniesieniu Utworu Licencjonowanego Uprawnień Licencyjnych do:&#10;1. zwielokrotniania i Dzielenia się Utworem Licencjonowanym w całości lub części; a także&#10;2. tworzenia, zwielokrotniania i Dzielenia się Utworami Zależnymi.&#10;2. Wyjątki i Ograniczenia. W razie wątpliwości, w przypadku, gdy korzystanie przez Licencjobiorcę odbywa się w&#10;ramach Wyjątków i Ograniczeń, niniejsza Licencja Publiczna nie ma zastosowania, a Licencjobiorca nie jest&#10;zobowiązany do przestrzegania jej warunków.&#10;3. Czas trwania. Czas trwania niniejszej Licencji Publicznej określony jest w Paragrafie 6(a).&#10;4. Środki przekazu i formaty; zezwolenie na modyfikacje techniczne. Licencjodawca upoważnia Licencjobiorcę do&#10;wykonywania Uprawnień Licencyjnych za pośrednictwem wszystkich znanych lub mających powstać w przyszłości&#10;środków przekazu oraz we wszystkich znanych lub mających powstać w przyszłości formatach, a także do&#10;dokonywania w tym celu koniecznych modyfikacji technicznych. Licencjodawca zrzeka się i/lub zobowiązuje do&#10;niewykonywania prawa do zabronienia Licencjobiorcy dokonywania modyfikacji technicznych koniecznych dla&#10;wykonywania Uprawnień Licencyjnych, włącznie z modyfikacjami technicznymi koniecznymi do obejścia&#10;Skutecznych Zabezpieczeń Technicznych. Dla celów niniejszej Licencji Publicznej, proste dokonanie modyfikacji&#10;objętych niniejszym Paragrafem 2(a)(4) nie prowadzi do powstania Utworu Zależnego.&#10;5. Dalsi odbiorcy.&#10;1. Oferta Licencjodawcy – Utwór Licencjonowany. Każdy odbiorca Utworu Licencjonowanego automatycznie&#10;otrzymuje ofertę Licencjodawcy przystąpienia do wykonywania Uprawnień Licencyjnych zgodnie z warunkami&#10;niniejszej Licencji Publicznej.&#10;2. Dodatkowa oferta Licencjodawcy – Utwór Zależny. Każdy dalszy odbiorca Utworu Zależnego otrzymanego od&#10;Licencjobiorcy automatycznie otrzymuje ofertę Licencjodawcy przystąpienia do wykonywania Uprawnień&#10;Licencyjnych do korzystania z Utworu Zależnego zgodnie z warunkami Licencji Twórcy Utworu Zależnego.&#10;3. Żadnych ograniczeń dla dalszych odbiorców. Licencjobiorca nie może oferować ani nakładać dodatkowych lub&#10;zmienionych warunków wykorzystania Utworu Licencjonowanego, ani stosować jakichkolwiek Skutecznych&#10;Zabezpieczeń Technicznych, jeśli działania te ograniczają wykonywanie Uprawnień Licencyjnych przez&#10;jakiegokolwiek odbiorcę Utworu Licencjonowanego.&#10;6. Brak upoważnienia. Żaden element niniejszej Licencji Publicznej nie stanowi zezwolenia, ani nie może być&#10;interpretowany jako zezwolenie na sugerowanie lub stwierdzanie, że Licencjobiorca lub wykorzystanie przez&#10;Licencjobiorcę Utworu Licencjonowanego są powiązane, sponsorowane, upoważnione lub oficjalnie uznane przez&#10;Licencjodawcę lub inne podmioty wskazane w celu uznania autorstwa, zgodnie z postanowieniem Paragrafu 3(a)&#10;(1)(A)(i).&#10;2. Inne prawa.&#10;1. Autorskie prawa osobiste, takie jak prawo do nienaruszalności formy i treści utworu, ani prawo do kontroli&#10;komercyjnego wykorzystania wizerunku, prawo do prywatności, lub inne podobne prawa osobiste nie są objęte&#10;niniejszą Licencją Publiczną. Jednakże, w najszerszym możliwym zakresie, lub w zakresie ograniczonym,&#10;pozwalającym na wykonywanie przez Licencjobiorcę Uprawnień Licencyjnych (jednak nie w żaden inny sposób),&#10;Licencjodawca zrzeka się lub zobowiązuje do niewykonywania powyższych przysługujących Mu praw.&#10;2. Prawa patentowe i prawa do znaków towarowych nie są objęte niniejszą Licencją Publiczną.&#10;3. W najszerszym możliwym zakresie, Licencjodawca zrzeka się wszelkich praw do wynagrodzenia od Licencjobiorcy&#10;za wykonywanie Uprawnień Licencyjnych, pobieranego bezpośrednio bądź za pośrednictwem organizacji&#10;zbiorowego zarządzania, na podstawie jakiegokolwiek, dobrowolnego lub zbywalnego, ustawowego lub&#10;obowiązkowego, systemu licencyjnego. W pozostałych przypadkach, Licencjodawca wyraźnie zastrzega prawo do&#10;pobierania wynagrodzenia.&#10;&#10;&#10;Paragraf 3 – Warunki Licencji.&#10;&#10;Wykonywanie Uprawnień Licencyjnych przez Licencjodawcę jest wyraźnie uzależnione od przestrzegania następujących&#10;warunków.&#10;1. Uznanie autorstwa.&#10;1. W przypadku, gdy Licencjobiorca Dzieli się Utworem Licencjonowanym (również w zmodyfikowanej formie), jest&#10;obowiązany:&#10;1. zachować następujące elementy, jeśli są one wskazane przez Licencjodawcę w Utworze Licencjonowanym:&#10;1. identyfikację twórcy Utworu Licencjonowanego oraz jakichkolwiek innych osób, wskazanych do uzyskania&#10;atrybucji, w rozsądny sposób, oznaczony przez Licencjodawcę (włącznie z podaniem wskazanego&#10;pseudonimu);&#10;2. informacji o prawach autorskich;&#10;3. oznaczenie niniejszej Licencji Publicznej;&#10;4. oznaczenie wyłączenia gwarancji;&#10;5. URI lub hiperłącze do Utworu Licencjonowanego, w rozsądnym zakresie wyznaczonym przez możliwości&#10;techniczne;&#10;2. oznaczyć czy Licencjobiorca wprowadził modyfikacje w Utworze Licencjonowanym, oraz zachować oznaczenia&#10;poprzednich modyfikacji; oraz&#10;3. oznaczyć Utwór Licencjonowany jako dostępny na niniejszej Licencji Publicznej, a także załączyć tekst, adres&#10;URI lub hiperłącze do niniejszej Licencji Publicznej.&#10;2. Warunków określonych w Paragrafie 3(a)(1) Licencjobiorca może dochować w każdy rozsądny sposób, stosownie&#10;do nośnika, środka przekazu i kontekstu, w jakim Licencjobiorca Dzieli się Utworem Licencjonowanym. Na&#10;przykład, rozsądnym dochowaniem wyżej określonych warunków może być załączenie adresu URI lub hiperłącza&#10;do źródła zawierającego wymagane informacje.&#10;3. Jeśli zażąda tego Licencjodawca, Licencjobiorca obowiązany jest usunąć wszelkie informacje określone w&#10;Paragrafie 3(a)(1)(A) w uzasadnionym zakresie wyznaczonym przez możliwości techniczne.&#10;2. Na tych samych warunkach.&#10;Oprócz obowiązku dochowania warunków określonych w Paragrafie 3(a), w przypadku, gdy Licencjobiorca Dzieli się&#10;stworzonym przez siebie Utworem Zależnym, Licencjobiorca obowiązany jest ponadto dochować następujących&#10;warunków.&#10;1. Licencja Twórcy Utworu Zależnego, stosowana przez Licencjobiorcę, musi być licencją Creative Commons&#10;składającą się z tych samych Elementów Licencji, odpowiadających niniejszej wersji lub późniejszej, lub Licencją&#10;Kompatybilną z BY-SA.&#10;2. Licencjobiorca obowiązany jest uwidocznić tekst, adres URI lub hiperłącze prowadzące do Licencji Twórcy Utworu&#10;Zależnego, stosowanej przez Licencjobiorcę. Należy dokonać tego w odpowiedni sposób w zależności of formatu,&#10;kontekstu i sposobu w jaki Licencjobiorca udostępnia Utwór Zależny.&#10;3. Licencjobiorca nie może oferować lub nakładać żadnych dodatkowych lub zmienionych warunków korzystania z&#10;Utworu Zależnego, ani stosować Skutecznych Zabezpieczeń Technicznych, jeśli działania te ograniczałyby&#10;wykonywanie praw przyznanych przez Licencję Twórcy Utworu Zależnego, stosowaną przez Licencjobiorcę.&#10;&#10;&#10;Paragraf 4 – Prawa Sui Generis do Baz Danych.&#10;&#10;W przypadku, gdy Uprawnienia Licencyjne obejmują Prawa Sui Generis do Baz Danych, mające zastosowanie do&#10;określonego korzystania z Utworu Licencjonowanego przez Licencjobiorcę:&#10;1. w razie wątpliwości, Paragraf 2(a)(1) przyznaje Licencjobiorcy prawo do wyodrębniania, ponownego wykorzystania,&#10;zwielokrotniania oraz Dzielenia się całością lub istotną częścią zawartości bazy danych;&#10;2. w przypadku, gdy Licencjobiorca zawiera całość lub istotną część bazy danych w bazie danych, do której Prawa Sui&#10;Generis do Baz Danych przysługują Licencjobiorcy, baza danych, do której Prawa Sui Generis do Baz Danych&#10;przysługują Licencjobiorcy, stanowi Utwór Zależny (jednakże nie dotyczy to jej samodzielnych części), w tym także dla&#10;celów Paragrafu 3(b); oraz&#10;3. w przypadku, gdy Licencjobiorca Dzieli się całością lub istotną częścią bazy danych, obowiązany jest przestrzegać&#10;warunków Paragrafu 3(a).&#10;W razie wątpliwości, niniejszy Paragraf 4 uzupełnia, lecz nie zastępuje obowiązków Licencjodawcy wynikających z&#10;niniejszej Licencji Publicznej, w przypadku, gdy Uprawnienia Licencyjne obejmują inne Prawa Autorskie i Prawa Podobne&#10;do Praw Autorskich.&#10;&#10;&#10;Paragraf 5 – Wyłączenie Gwarancji i Ograniczenie Odpowiedzialności.&#10;&#10;1. Jeżeli Licencjodawca oddzielnie nie postanowił inaczej, Licencjodawca, w możliwie najszerszym zakresie,&#10;oferuje Utwór Licencjonowany w takiej formie, w jakiej zapoznał się z nim Licencjobiorca i nie udziela&#10;żadnych zapewnień, ani jakiegokolwiek rodzaju gwarancji, dotyczących Utworu Licencjonowanego, ani&#10;wynikających z wyraźnego postanowienia, dorozumianych, ustawowych, ani jakichkolwiek innych. Obejmuje&#10;to, bez ograniczeń, rękojmię, zbywalność, przydatność do konkretnego celu, brak naruszeń praw innych&#10;osób, brak ukrytych lub innych wad, dokładność, występowanie lub niewystępowanie wad widocznych jak i&#10;ukrytych. W przypadku, gdy wyłączenie gwarancji nie jest dozwolone w całości lub w części, niniejsze&#10;wyłączenie może nie mieć zastosowania do Licencjobiorcy.&#10;2. W najdalej idącym stopniu, w żadnym wypadku Licencjodawca nie odpowiada wobec Licencjobiorcy na&#10;żadnej podstawie prawnej (włączając w to, bez ograniczeń, niedochowanie należytej staranności) za&#10;bezpośrednie, specjalne , pośrednie, przypadkowe, następcze, karne, ani żadne inne straty, koszty, utracone&#10;korzyści, wydatki, ani szkody wynikające z zastosowania niniejszej Licencji Publicznej lub korzystania z&#10;Utworu Licencjonowanego, nawet w przypadku, gdy Licencjodawca był powiadomiony o możliwości&#10;poniesienia takich strat, kosztów, wydatków, lub szkód. W przypadku, gdy ograniczenie odpowiedzialności&#10;nie jest dozwolone w całości lub w części, takie ograniczenie nie ma zastosowania do Licencjobiorcy.&#10;3. Powyższe wyłączenie gwarancji i ograniczenie odpowiedzialności będzie interpretowane w sposób zapewniający&#10;wyłączenie i zrzeczenie się odpowiedzialności w zakresie możliwie najszerszym.&#10;&#10;&#10;Paragraf 6 – Termin i Wygaśnięcie.&#10;&#10;1. Niniejsza Licencja Publiczna jest udzielona na czas trwania licencjonowanych Praw Autorskich i Praw Podobnych do&#10;Praw Autorskich. Jednakże, jeśli Licencjobiorca naruszy postanowienia niniejszej Licencji Publicznej, prawa&#10;Licencjobiorcy wynikające z niniejszej Licencji Publicznej wygasają automatycznie.&#10;2. Jeżeli prawo Licencjobiorcy do korzystania z Utworu Licencjonowanego wygasło na podstawie Paragrafu 6(a), zostaje&#10;ono przywrócone:&#10;1. automatycznie z datą usunięcia naruszenia, jeśli nastąpiło ono w ciągu 30 dni od odkrycia naruszenia przez&#10;Licencjobiorcę; lub&#10;2. w razie wyraźnego przywrócenia przez Licencjodawcę.&#10;W razie wątpliwości, niniejszy Paragraf 6(b) nie ogranicza żadnych uprawnień Licencjodawcy przysługujących mu w&#10;razie naruszenia przez Licencjobiorcę niniejszej Licencji Publicznej.&#10;3. W razie wątpliwości, Licencjodawca może także oferować Utwór Licencjonowany na odrębnych warunkach, bądź&#10;przestać dystrybuować Utwór Licencjonowany w każdej chwili; nie prowadzi to jednak do wygaśnięcia niniejszej&#10;Licencji Publicznej.&#10;4. Paragrafy 1, 5, 6, 7 i 8 trwają również po wygaśnięciu niniejszej Licencji Publicznej.&#10;&#10;&#10;Paragraf 7 – Inne Warunki.&#10;&#10;1. Licencjodawca nie jest związany żadnymi dodatkowymi lub zmienionymi warunkami zakomunikowanymi przez&#10;Licencjobiorcę, chyba że dosłownie wyrazi na to swoją zgodę.&#10;2. Jakiekolwiek ustalenia, porozumienia, umowy odnoszące się do Utworu Licencjonowanego, nie wyrażone w niniejszej&#10;Licencji Publicznej, nie stanowią jej postanowień i są od niej niezależne.&#10;&#10;&#10;Paragraf 8 – Wykładnia.&#10;&#10;1. W razie wątpliwości, niniejsza Licencja Publiczna nie zawęża, nie ogranicza, ani nie warunkuje jakiegokolwiek&#10;dozwolonego wykorzystania Utworu Licencjonowanego, mogącego odbywać się zgodnie z prawem bez zezwolenia&#10;wynikającego z niniejszej Licencji Publicznej, ani nie może być w ten sposób interpretowana.&#10;2. Jeżeli jakiekolwiek postanowienie niniejszej Licencji Publicznej uważa się za nieskuteczne, będzie ono&#10;automatycznie, na ile to tylko możliwe, w jak najmniejszym, koniecznym stopniu przekształcone tak, aby stało się&#10;skuteczne. Jeżeli postanowienie takie nie może zostać przekształcone, zostanie ono unieważnione bez wpływu na&#10;skuteczność pozostałych postanowień niniejszej Licencji Publicznej.&#10;3. Żadne postanowienie niniejszej Licencji Publicznej nie będzie uchylone, ani żadne naruszenie jej postanowień&#10;dozwolone, bez wyrażonej dosłownie zgody Licencjodawcy.&#10;4. Niniejsza Licencja Publiczna nie stanowi, ani nie może być interpretowana jako ograniczenie lub zrzeczenie się&#10;jakichkolwiek przywilejów Licencjodawcy lub Licencjobiorcy, w tym immunitetów procesowych względem jakiejkolwiek&#10;władzy jurysdykcyjnej." AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="117.0" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </JFXTabPane>
+            <AnchorPane layoutX="180.0" layoutY="437.0" prefHeight="36.0" prefWidth="660.0" style="-fx-background-color: #212121;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <Label fx:id="workingLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="184.0" layoutY="6.0" prefHeight="22.0" prefWidth="292.0" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="184.0" AnchorPane.rightAnchor="184.0">
+                     <effect>
+                        <DropShadow height="8.0" radius="3.5" width="8.0" />
+                     </effect>
+                  </Label>
+                  <Circle fx:id="status" fill="#ea3109" layoutX="25.0" layoutY="17.0" radius="11.0" stroke="#dddddd" strokeType="INSIDE" strokeWidth="0.0" AnchorPane.leftAnchor="14.0">
+                     <effect>
+                        <DropShadow height="8.0" radius="3.5" width="8.0" />
+                     </effect>
+                  </Circle>
+                  <Label fx:id="statusLabel" layoutX="43.0" layoutY="4.0" prefHeight="25.0" prefWidth="222.0" text="Brak połączenia" textFill="WHITE" AnchorPane.leftAnchor="43.0">
+                     <effect>
+                        <DropShadow height="8.0" radius="3.5" width="8.0" />
+                     </effect>
+                  </Label>
+                  <JFXSpinner fx:id="workingLoader" layoutX="624.0" layoutY="-2.0" prefHeight="35.0" prefWidth="22.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="-2.0">
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </JFXSpinner>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="474.0" prefWidth="180.0" style="-fx-background-color: linear-gradient(to right top, #161616, #181819, #19191c, #1a1b20, #1b1d23, #21242a, #272c32, #2d3439, #3c4347, #4c5355, #5c6364, #6e7474);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <JFXButton fx:id="connectBtn" buttonType="RAISED" layoutX="12.0" layoutY="14.0" onAction="#connectBtn" prefHeight="49.0" prefWidth="156.0" ripplerFill="#ea3109" style="-fx-background-color: #424242;" text="Połącz" textFill="WHITE" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="14.0">
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" fontSmoothingType="LCD" glyphName="ETHERNET" size="20" />
+                     </graphic>
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" />
+                     </effect>
+                  </JFXButton>
+                  <JFXButton fx:id="readBtn" buttonType="RAISED" layoutX="12.0" layoutY="73.0" onAction="#readBtn" prefHeight="35.0" prefWidth="156.0" ripplerFill="#ea3109" style="-fx-background-color: #424242;" text="Odśwież" textFill="WHITE" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="73.0">
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" fontSmoothingType="LCD" glyphName="RELOAD" size="20" />
+                     </graphic>
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" />
+                     </effect>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="12.0" layoutY="118.0" prefHeight="35.0" prefWidth="156.0" ripplerFill="#ea3109" style="-fx-background-color: #424242;" text="Edytuj" textFill="WHITE" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="118.0">
+                     <graphic>
+                        <FontAwesomeIconView boundsType="LOGICAL_VERTICAL_CENTER" fill="WHITE" glyphName="EDIT" size="20" textOrigin="CENTER" wrappingWidth="18.0" />
+                     </graphic>
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" height="10.5" radius="2.125" width="0.0" />
+                     </effect>
+                  </JFXButton>
+                  <JFXListView fx:id="deviceList" editable="true" layoutX="12.0" layoutY="163.0" prefHeight="216.0" prefWidth="156.0" style="-fx-background-color: #212121;" AnchorPane.bottomAnchor="58.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="163.0">
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" height="8.0" radius="3.5" width="8.0" />
+                     </effect>
+                  </JFXListView>
+                  <JFXButton fx:id="readBtn21" buttonType="RAISED" layoutX="12.0" layoutY="390.0" onAction="#cliBtn" prefHeight="35.0" prefWidth="156.0" ripplerFill="#ea3109" style="-fx-background-color: #424242;" text="CLI" textFill="WHITE" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0">
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" fontSmoothingType="LCD" glyphName="CONSOLE" size="20" />
+                     </graphic>
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" />
+                     </effect>
+                  </JFXButton>
+               </children>
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" height="30.0" radius="14.5" width="30.0" />
+               </effect>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="dialogPane" visible="false" StackPane.alignment="CENTER">
+         <children>
+            <StackPane prefHeight="474.0" prefWidth="840.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <AnchorPane maxHeight="243.0" maxWidth="408.0" minHeight="243.0" minWidth="408.0" prefHeight="243.0" prefWidth="408.0" style="-fx-background-color: white; -fx-background-radius: 4;" StackPane.alignment="CENTER">
+                     <effect>
+                        <DropShadow height="80.0" radius="39.5" spread="0.1" width="80.0" />
+                     </effect>
+                     <children>
+                        <Label alignment="CENTER" layoutY="23.0" prefHeight="17.0" prefWidth="372.0" text="Połączenie" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="23.0">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="hostIP" focusColor="#ea3109" layoutX="47.0" layoutY="85.0" prefHeight="25.0" prefWidth="222.0" promptText="Adres IP" unFocusColor="BLACK" AnchorPane.leftAnchor="47.0" AnchorPane.rightAnchor="139.0" AnchorPane.topAnchor="85.0" />
+                        <JFXTextField fx:id="hostPort" focusColor="#ea3109" layoutX="279.0" layoutY="85.0" prefHeight="25.0" prefWidth="83.0" promptText="Port" text="80" unFocusColor="BLACK" />
+                        <JFXTextField fx:id="hostUsername" focusColor="#ea3109" layoutX="47.0" layoutY="122.0" prefHeight="25.0" prefWidth="279.0" promptText="Nazwa użytkownika" unFocusColor="BLACK" AnchorPane.leftAnchor="47.0" AnchorPane.rightAnchor="46.0" AnchorPane.topAnchor="122.0" />
+                        <JFXButton layoutX="47.0" layoutY="196.0" onAction="#cancelDialogBtn" prefHeight="25.0" prefWidth="83.0" style="-fx-background-color: #ff3526;" text="Anuluj" textFill="WHITE" AnchorPane.leftAnchor="47.0" />
+                        <JFXButton layoutX="140.0" layoutY="196.0" onAction="#connectDialogBtn" prefHeight="25.0" prefWidth="222.0" style="-fx-background-color: #1d5c9b;" text="połącz" textFill="WHITE" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="46.0" />
+                        <JFXPasswordField fx:id="hostPassword" focusColor="#ea3109" layoutX="47.0" layoutY="159.0" prefHeight="25.0" prefWidth="315.0" promptText="Hasło" unFocusColor="BLACK" />
+                        <JFXTextField fx:id="hostName" focusColor="#ea3109" layoutX="47.0" layoutY="48.0" prefHeight="25.0" prefWidth="315.0" promptText="Nazwa (Pozostaw puste aby nie dodawać do listy)" unFocusColor="BLACK" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </StackPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="editDialogPane" visible="false">
+         <children>
+            <StackPane prefHeight="474.0" prefWidth="840.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <AnchorPane maxHeight="180.0" maxWidth="408.0" minHeight="180.0" minWidth="408.0" prefHeight="180.0" prefWidth="408.0" style="-fx-background-color: white; -fx-background-radius: 4;" StackPane.alignment="CENTER">
+                     <effect>
+                        <DropShadow height="80.0" radius="39.5" spread="0.1" width="80.0" />
+                     </effect>
+                     <children>
+                        <Label alignment="CENTER" layoutY="24.0" prefHeight="17.0" prefWidth="372.0" text="Edytuj" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="24.0">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="nameField" focusColor="#ea3109" layoutX="47.0" layoutY="74.0" prefHeight="25.0" prefWidth="279.0" promptText="Nazwa" unFocusColor="BLACK" AnchorPane.leftAnchor="47.0" AnchorPane.rightAnchor="46.0" AnchorPane.topAnchor="74.0" />
+                        <JFXButton layoutX="48.0" layoutY="122.0" onAction="#cancelEditMode" prefHeight="25.0" prefWidth="83.0" style="-fx-background-color: #ff3526;" text="Anuluj" textFill="WHITE" AnchorPane.leftAnchor="48.0" />
+                        <JFXButton layoutX="141.0" layoutY="122.0" onAction="#exitEditMode" prefHeight="25.0" prefWidth="222.0" style="-fx-background-color: #1d5c9b;" text="Zapisz" textFill="WHITE" AnchorPane.leftAnchor="141.0" AnchorPane.rightAnchor="45.0" />
+                        <Label fx:id="nameLabel" alignment="CENTER" layoutX="18.0" layoutY="42.0" prefHeight="17.0" prefWidth="372.0" text="nazwa - typ" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Italic" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </StackPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
